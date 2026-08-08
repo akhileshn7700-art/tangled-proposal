@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+
+  /* Left side card */
+  justify-content: flex-start;
+
+  align-items: center;
+  padding-left: 80px;
+
+  font-family: "Poppins", sans-serif;
+
+  background: url("images/tangled\ aesthetic.jpg") center center/cover no-repeat
+    fixed;
+
+  overflow: hidden;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(15, 5, 25, 0.65),
+    rgba(35, 10, 55, 0.75),
+    rgba(10, 5, 20, 0.85)
+  );
+}
+
+.login-card {
+  position: relative;
+  z-index: 2;
+  width: 380px;
+  padding: 42px 32px;
+  border-radius: 28px;
+
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(14px);
+
+  text-align: center;
+  color: white;
+
+  box-shadow:
+    0 0 25px rgba(255, 215, 120, 0.35),
+    0 0 60px rgba(255, 170, 80, 0.15);
+
+  animation: float 4s ease-in-out infinite;
+}
+
+.login-card h1 {
+  font-family: "Cinzel", serif;
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #ffd86b;
+  text-shadow:
+    0 0 10px rgba(255, 216, 107, 0.8),
+    0 0 20px rgba(255, 170, 0, 0.5);
+}
+
+.login-card p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #f3e9ff;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+}
+
+.login-card input::placeholder {
+  color: #ddd;
+}
+
+.login-card button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 18px;
+  border: none;
+  border-radius: 14px;
+
+  background: linear-gradient(135deg, #ffd86b, #ff9f1c);
+
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+
+  cursor: pointer;
+  transition: 0.35s;
+}
+
+.login-card button:hover {
+  transform: translateY(-2px) scale(1.02);
+
+  box-shadow:
+    0 0 15px rgba(255, 216, 107, 0.7),
+    0 0 30px rgba(255, 159, 28, 0.45);
+}
+
+#error {
+  margin-top: 12px;
+  color: #ffb3b3;
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+@media (max-width: 768px) {
+  body {
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .login-card {
+    width: 100%;
+    max-width: 380px;
+  }
+}

@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+
+  background: url("images/Rapunzel\ &\ Flynn\ Rider\ Love\ PC\ wallpaper.jpg") center center/cover no-repeat fixed;
+
+  position: relative;
+
+  /* Enable scrolling */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 5, 20, 0.25),
+    rgba(15, 5, 25, 0.45),
+    rgba(10, 5, 20, 0.75)
+  );
+}
+
+.hero {
+  position: relative;
+  z-index: 2;
+
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+
+  /* Start from top on mobile */
+  align-items: flex-start;
+
+  padding: 80px 20px 40px;
+}
+
+.content {
+  max-width: 800px;
+  text-align: center;
+}
+
+.small {
+  color: #f3e9ff;
+  font-size: 14px;
+  margin-bottom: 18px;
+  letter-spacing: 0.5px;
+}
+
+h1 {
+  font-family: "Cinzel", serif;
+  font-size: 64px;
+  color: #ffd86b;
+
+  text-shadow:
+    0 0 12px rgba(255, 216, 107, 0.8),
+    0 0 30px rgba(255, 180, 50, 0.35);
+
+  margin-bottom: 26px;
+}
+
+.text {
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 2;
+  margin-bottom: 20px;
+
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+h2 {
+  margin-top: 32px;
+  margin-bottom: 28px;
+
+  color: white;
+  font-size: 34px;
+  line-height: 1.4;
+
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+button {
+  min-width: 170px;
+  height: 58px;
+  border: none;
+  border-radius: 18px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+  z-index: 10;
+}
+.yes-btn {
+  background: linear-gradient(135deg, #ff2d55, #ff6b8a);
+  color: white;
+  box-shadow:
+    0 12px 28px rgba(255, 45, 85, 0.45),
+    0 0 24px rgba(255, 107, 138, 0.35);
+}
+
+.no-btn {
+  background: rgba(255, 255, 255, 0.95);
+  color: #222;
+  box-shadow: 0 10px 24px rgba(255, 255, 255, 0.25);
+}
+
+.no-btn:hover {
+  transform: translateY(-3px);
+}
+
+.yes-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow: auto;
+  }
+
+  .hero {
+    align-items: flex-start;
+    padding-top: 70px;
+    padding-bottom: 40px;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+
+  .text {
+    font-size: 16px;
+    line-height: 1.9;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  button {
+    width: 100%;
+    max-width: 260px;
+  }
+}

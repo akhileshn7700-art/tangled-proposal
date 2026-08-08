@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+
+  /* Move card to left */
+  justify-content: flex-start;
+
+  align-items: center;
+
+  /* Space from left */
+  padding-left: 90px;
+
+  font-family: "Poppins", sans-serif;
+
+  background: url("images/Tangled\ wallpaper.jpg") center center/cover no-repeat
+    fixed;
+
+  overflow: hidden;
+  position: relative;
+}
+
+/* Dark magical overlay */
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(20, 8, 30, 0.35),
+    rgba(40, 15, 55, 0.45),
+    rgba(15, 5, 20, 0.65)
+  );
+  z-index: 0;
+}
+
+.card {
+  width: 430px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
+
+  padding: 48px 36px;
+  border-radius: 30px;
+  text-align: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  box-shadow:
+    0 0 25px rgba(255, 215, 120, 0.25),
+    0 0 60px rgba(255, 170, 80, 0.12);
+
+  position: relative;
+  z-index: 2;
+
+  animation: float 4s ease-in-out infinite;
+}
+
+.card h1 {
+  font-size: 34px;
+  margin-bottom: 10px;
+  color: #fff3c4;
+  text-shadow: 0 0 12px rgba(255, 216, 107, 0.6);
+}
+
+.card h2 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: white;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+}
+
+.card p {
+  margin-top: 18px;
+  color: #f8eaff;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.buttons {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  position: relative;
+  height: 54px;
+}
+
+button {
+  width: 110px;
+  height: 46px;
+  border: none;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.yes-btn {
+  background: linear-gradient(135deg, #ff4d6d, #ff8fab);
+  color: white;
+  box-shadow: 0 10px 25px rgba(255, 77, 109, 0.35);
+}
+
+.yes-btn:hover {
+  transform: scale(1.06);
+}
+
+.no-btn {
+  background: rgba(255, 255, 255, 0.88);
+  color: #444;
+  position: absolute;
+  right: 70px;
+}
+
+.heart {
+  position: absolute;
+  color: #ffb3c1;
+  font-size: 20px;
+  animation: floatHeart 6s linear infinite;
+  opacity: 0.75;
+  z-index: 1;
+}
+
+@keyframes floatHeart {
+  0% {
+    transform: translateY(100vh) scale(0.5);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.75;
+  }
+  100% {
+    transform: translateY(-120px) scale(1.2);
+    opacity: 0;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 92%;
+    padding: 36px 24px;
+  }
+
+  .card h2 {
+    font-size: 26px;
+  }
+
+  .buttons {
+    gap: 12px;
+  }
+
+  button {
+    width: 100px;
+  }
+
+  .no-btn {
+    right: 50px;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 380px;
+    margin-left: 0;
+  }
+}

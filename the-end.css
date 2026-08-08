@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+
+  background: url("images/We\ Heart\ It.gif") center center/cover no-repeat
+    fixed;
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  padding-bottom: 50px;
+
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(10, 5, 20, 0.58);
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+
+  text-align: center;
+
+  max-width: 850px;
+
+  padding: 20px;
+
+  animation: fadeIn 1.4s ease;
+}
+
+.emoji {
+  font-size: 48px;
+  margin-bottom: 18px;
+}
+
+h1 {
+  font-size: 48px;
+  color: white;
+
+  line-height: 1.4;
+
+  text-shadow:
+    0 0 12px rgba(255, 255, 255, 0.25),
+    0 2px 18px rgba(0, 0, 0, 0.65);
+
+  margin-bottom: 22px;
+}
+
+p {
+  color: #f8eaff;
+  font-size: 19px;
+  line-height: 1.9;
+
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+
+  margin-bottom: 14px;
+}
+
+.small {
+  margin-top: 12px;
+  font-size: 16px;
+  color: #ffd6ea;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .emoji {
+    font-size: 38px;
+  }
+}

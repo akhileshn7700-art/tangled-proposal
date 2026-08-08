@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  position: relative;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 5, 20, 0.45),
+    rgba(15, 5, 25, 0.72),
+    rgba(10, 5, 20, 0.88)
+  );
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: auto;
+  padding: 80px 24px;
+}
+
+.title {
+  font-family: "Cinzel", serif;
+  font-size: 48px;
+  color: #ffd86b;
+  margin-bottom: 24px;
+  text-shadow: 0 0 18px rgba(255, 216, 107, 0.45);
+}
+
+.text {
+  font-size: 18px;
+  line-height: 2;
+  color: #f8eaff;
+  margin-bottom: 22px;
+}
+
+.video-box {
+  margin-top: 40px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 28px;
+  padding: 18px;
+}
+
+.video-box h3 {
+  color: #ffd86b;
+  margin-bottom: 14px;
+}
+
+.video-box video {
+  width: 100%;
+  border-radius: 20px;
+  outline: none;
+}
+
+.back {
+  display: inline-block;
+  margin-top: 32px;
+  padding: 12px 24px;
+  border-radius: 14px;
+  background: #ffd86b;
+  color: #2b1a05;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.back:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(255, 216, 107, 0.35);
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 56px 18px;
+  }
+
+  .title {
+    font-size: 34px;
+  }
+
+  .text {
+    font-size: 16px;
+    line-height: 1.9;
+  }
+}

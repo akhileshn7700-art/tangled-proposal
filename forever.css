@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background: url("images/first_kiss1.jpg") center/cover fixed;
+  position: relative;
+  color: white;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 5, 25, 0.78);
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 56px;
+  font-family: "Cinzel", serif;
+  color: #ffd86b;
+  margin-bottom: 10px;
+  text-shadow: 0 0 18px rgba(255, 216, 107, 0.45);
+}
+
+.subtitle {
+  text-align: center;
+  color: #f8eaff;
+  margin-bottom: 50px;
+  font-size: 18px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  text-decoration: none;
+  color: white;
+
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(14px);
+
+  padding: 34px;
+  border-radius: 30px;
+
+  transition: 0.35s;
+
+  box-shadow: 0 0 25px rgba(255, 215, 120, 0.08);
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+
+  box-shadow:
+    0 0 25px rgba(255, 215, 120, 0.25),
+    0 0 50px rgba(255, 170, 80, 0.15);
+}
+
+.emoji {
+  font-size: 42px;
+  margin-bottom: 18px;
+}
+
+.card h2 {
+  color: #ffd86b;
+  margin-bottom: 14px;
+  font-size: 28px;
+}
+
+.card p {
+  color: #f3e9ff;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 42px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+.next-page-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.next-page-btn {
+  padding: 16px 36px;
+  border-radius: 18px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: #2b1a05;
+
+  background: linear-gradient(135deg, #ffd86b, #ffb347);
+
+  box-shadow:
+    0 10px 25px rgba(255, 216, 107, 0.35),
+    0 0 30px rgba(255, 179, 71, 0.25);
+
+  transition: 0.35s;
+}
+
+.next-page-btn:hover {
+  transform: translateY(-4px) scale(1.04);
+
+  box-shadow:
+    0 16px 35px rgba(255, 216, 107, 0.45),
+    0 0 40px rgba(255, 179, 71, 0.35);
+}
