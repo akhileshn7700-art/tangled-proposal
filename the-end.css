@@ -8,8 +8,7 @@ body {
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
 
-  background: url("images/We\ Heart\ It.gif") center center/cover no-repeat
-    fixed;
+  background: url("images/we-heart-it.gif") center center/cover no-repeat fixed;
 
   position: relative;
 

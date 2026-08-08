@@ -59,7 +59,7 @@ function showForever() {
     .yes-page{
       min-height:100vh;
 
-      background:url('images/tangled 💜.jpg') center center/cover no-repeat fixed;
+      background:url('images/tangled-final.jpg') center center/cover no-repeat fixed;
 
       display:flex;
       justify-content:center;
